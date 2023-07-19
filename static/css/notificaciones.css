@@ -1,0 +1,90 @@
+.nota {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    min-height: 8rem;
+    z-index: 1000;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    font-size: 1.2rem;
+    
+    /* nota por defecto es info */
+    background-color: var(--color-info, #0C4264);
+    color: var(--color-blanco, #ffffff);
+}
+
+.nota span:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.nota .cerrar-nota {
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    height: 2.2rem;
+    transform: scale(.8);
+}
+
+.nota .cerrar-nota > span {
+    display: block;
+    width: 2rem;
+    height: .2rem;
+    border-radius: 50%;
+    background-color: var(--color-blanco, #ffffff);
+}
+
+.nota .cerrar-nota > span:first-child {
+    transform: translateY(.9rem) rotate(45deg);
+}
+
+.nota .cerrar-nota > span:last-child {
+    transform: translateY(.7rem) rotate(135deg);
+}
+
+.nota.ocultar-nota {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nota {
+        font-size: 2rem;
+    }
+    
+    .nota .cerrar-nota {
+        
+        right: 4rem;
+        transform: scale(1);
+    }
+}
+
+
+/* ************************************************************************
+ * Nota OK
+ * **********************************************************************   */
+.nota.ok {
+    background-color: var(--color-ok, #26648B);
+}
+
+/* ************************************************************************
+ * Nota Advertencia
+ * **********************************************************************   */
+.nota.advertencia {
+    background-color: var(--color-advertencia, #E39054);
+}
+
+/* ************************************************************************
+ * Nota Error
+ * **********************************************************************   */
+ .nota.error {
+    background-color: var(--color-error, #C3512D);
+}

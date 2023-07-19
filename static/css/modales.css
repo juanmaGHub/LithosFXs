@@ -1,0 +1,212 @@
+/* ***************************************************************************
+* Estilos generales para los modales
+* ****************************************************************************/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal h1 {
+    margin: 1.6rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.modal>.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    background-color: var(--color-blanco, #ffffff);
+    border-radius: 4px;
+    position: relative;
+
+}
+
+.modal .cerrar-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    height: 2rem;
+    max-height: 2rem;
+    width: 2rem;
+    max-width: 2rem;
+    padding: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ***************************************************************************
+* Modal Acceder/Registrarse
+* ****************************************************************************/
+#modal-usuario form {
+    max-width: 70rem;
+    border-bottom: 1px solid var(--color-secundario-info, #343a40);
+    margin-bottom: 2rem;
+}
+
+#modal-usuario form>.campo-formulario>input:not(input[type='submit']) {
+    max-width: 30rem;
+    height: 3rem;
+}
+
+#modal-usuario form>.campo-formulario>* {
+    margin: .8rem .4rem;
+}
+
+#modal-usuario form>.campo-formulario>button[type='submit'] {
+    width: 10rem;
+    margin: 2.4rem 0 3.8rem 0;
+}
+
+#modal-usuario>.contenedor>p {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#modal-usuario>.contenedor>p>a {
+    color: var(--color-secundario-info);
+    font-weight: bold;
+}
+
+/* ***************************************************************************
+* Modal Carrito
+* ****************************************************************************/
+#modal-carrito > .contenedor {
+    padding: 3rem 1rem;
+    justify-content: flex-start;
+    overflow: scroll;
+}
+
+#modal-carrito > .contenedor > * {
+    flex-shrink: 0;
+}
+
+#modal-carrito > .contenedor > .carrito-lista {
+    margin-bottom: 2rem;
+}
+
+#modal-carrito .carrito-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px dashed var(--color-secundario-info, #343a40);
+}
+
+#modal-carrito .carrito-producto > * {
+    margin: 1rem;
+}
+
+#modal-carrito .carrito-producto > img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+#modal-carrito .carrito-producto > div > h3 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+#modal-carrito .carrito-producto > div > p {
+    font-size: 1.2rem;
+}
+
+#modal-carrito .carrito-producto > div > input {
+    font-size: 1.2rem;
+    height: 2rem;
+}
+
+@media screen and (min-width: 768px){
+    #modal-carrito > .contenedor {
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+    
+    #modal-carrito .carrito-producto {
+        flex-direction: row;
+    }
+    
+    #modal-carrito .carrito-producto > * {
+        margin: 1rem;
+    }
+    
+    #modal-carrito .carrito-producto > img {
+        width: 6.4rem;
+        height: 6.4rem;
+        margin-right: 2rem;
+    }
+    
+    #modal-carrito .carrito-producto > div > h3 {
+        font-size: 1.6rem;
+    }
+    
+    #modal-carrito .carrito-producto > div > p {
+        font-size: 1.4rem;
+    }
+    
+    #modal-carrito .carrito-producto > div > input {
+        font-size: 1.4rem;
+        height: 2.4rem;
+    }
+}
+
+/******************************************************************************
+ * Modal Sobre Nosotros
+ * ****************************************************************************/
+#modal-sobre-nosotros > .contenedor > * {
+    margin: 1rem;
+    width: 90%;
+    text-align: left;
+}
+
+#modal-sobre-nosotros > .contenedor a {
+    color: var(--color-ok, #26648B);
+}
+
+#modal-sobre-nosotros > .contenedor > h1 {
+    font-size: 2rem;
+}
+
+#modal-sobre-nosotros > .contenedor > p {
+    font-size: 1.2rem;
+}
+
+#modal-sobre-nosotros > .contenedor > address {
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px){
+    #modal-sobre-nosotros > .contenedor > * {
+        width: 80%;
+    }
+
+    #modal-sobre-nosotros > .contenedor > h1 {
+        font-size: 3rem;
+    }
+
+    #modal-sobre-nosotros > .contenedor > p {
+        font-size: 1.8rem;
+    }
+
+    #modal-sobre-nosotros > .contenedor > address {
+        font-size: 1.6rem;
+    }
+}

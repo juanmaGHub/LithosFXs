@@ -1,0 +1,95 @@
+/* Box sizing y border-box */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Quitar márgenes y paddings por defecto */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía */
+html {
+    font-size: 62.5%;
+    /* 10px por defecto */
+}
+
+body {
+    font-size: 1.6rem;
+    /* tamaño de fuente base 16px */
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Formularios */
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+}
+
+button {
+    /* Resetear estilos para los botones */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+}
+
+/* Quitar outline on focus */
+*:focus {
+    outline: none;
+}
+
+/* Estilos de tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Charset y viewport -->
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Tags SEO -->
+        <meta
+            name="description"
+            content="Pedales de efectos de guitarra el&eacute;ctrica hechos a mano en Sevilla. Robustos y econ&oacute;micos"
+        />
+        <meta
+            name="keywords"
+            content="pedales, efectos, guitarra, el&eacute;ctrica, hechos a mano, sevilla, robustos, econ&oacute;micos"
+        />
+
+        <!-- Título y favicon -->
+        <title>LITHOSFXs</title>
+        <link
+            rel="shortcut icon"
+            href="./static/img/iconos/favico.ico"
+            type="image/x-icon"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./static/css/resetear.css" />
+        <link rel="stylesheet" href="./static/css/estilos.css" />
+        <link rel="stylesheet" href="./static/css/notificaciones.css" />
+        <link rel="stylesheet" href="./static/css/navegador.css" />
+        <link rel="stylesheet" href="./static/css/modales.css" />
+
+        <!-- JS -->
+        <script src="./static/js/notificaciones.js" type="module"></script>
+        <script src="./static/js/falso-usuario.js" type="module"></script>
+        <script src="./static/js/falso-carrito.js" type="module"></script>
+        <script src="./static/js/carrusel.js"></script>
+        <script src="./static/js/app.js" type="module"></script>
+    </head>
+    <body>
+        <!-- Navegador -->
+        <nav class="navegador-principal">
+            <div class="contenedor">
+                <div class="barra-navegador">
+                    <a href="#" id="logo">
+                        <i class="icono logo">
+                            <span><b></b></span>
+                            <span><b></b></span>
+                            <span><b></b></span>
+                        </i>
+                        <h1 class="logo-marca">LITHOS<span>FXs</span></h1>
+                    </a>
+                    <div id="menu-navegador-principal">
+                        <ul class="enlaces">
+                            <li>
+                                <a href="#seccion-productos">Pedales</a>
+                            </li>
+                            <li>
+                                <a href="#seccion-contacto">Contacto</a>
+                            </li>
+                            <li>
+                                <a href="#" id="link-sobre-nosotros">Nosotros</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="botones-mvl">
+                        <button
+                            class="btn-mvl"
+                            aria-label="Acceso/Registro"
+                            id="btn-mvl-usuario"
+                        >
+                            <img
+                                class="icono"
+                                src="./static/img/iconos/user-alt.svg"
+                                alt="Ícono de acceso/registro"
+                            />
+                        </button>
+                        <button
+                            class="btn-mvl"
+                            aria-label="Carrito"
+                            id="btn-mvl-carrito"
+                        >
+                            <img
+                                class="icono"
+                                src="./static/img/iconos/shopping-cart.svg"
+                                alt="Ícono de acceso/registro"
+                            />
+                        </button>
+                        <button
+                            id="btn-mvl-hamburguesa"
+                            class="btn-mvl"
+                            aria-label="Menú"
+                        >
+                            <i class="icono hamburguesa">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Contenido principal -->
+        <header class="hero">
+            <div class="contenedor">
+                <div class="hero-contenido">
+                    <h1 class="hero-copy">Pedales Boutique en Sevilla</h1>
+                    <p class="hero-detalles">
+                        Hechos a mano en Sevilla. Robustos y econ&oacute;micos.
+                        Env&iacute;os a toda Espa&ntilde;a.
+                    </p>
+                    <button class="primario">
+                        <a href="#seccion-productos">Explorar</a>
+                    </button>
+                </div>
+                <div class="hero-carrusel">
+                    <div class="carrusel">
+                        <img
+                            src="./static/img/productos/orivore.jpg"
+                            alt="Pedal de overdrive basado en el Hermida Zendrive"
+                        />
+                        <img
+                            class="activo"
+                            src="./static/img/productos/fuzzitte.jpg"
+                            alt="Pedal fuzz emulando la distorsi&oacute;n de un grabador de cinta"
+                        />
+                        <img
+                            src="./static/img/productos/foutffud.jpg"
+                            alt="Pedal tri-chorus basado en el Boss CE-1 y el Boss DC 2"
+                        />
+                    </div>
+                    <div class="carrusel-dots">
+                        <span class="dot"></span>
+                        <span class="dot activo"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="productos" id="seccion-productos">
+            <div class="contenedor">
+                <h1>Productos</h1>
+                <div class="tarjeta destacado">
+                    <div class="tarjeta-imagen">
+                        <img
+                            src="./static/img/productos/orivore.jpg"
+                            alt="Pedal de overdrive Orivore, basado en el Hermida Zendrive"
+                        />
+                    </div>
+                    <div class="tarjeta-detalles">
+                        <h2 class="tarjeta-titulo">Orivore</h2>
+                        <h3 class="tarjeta-subtitulo">Overdrive</h3>
+                        <p class="tarjeta-descripcion">
+                            Pedal de overdrive basado en el Hermida Zendrive. Su
+                            construcci&oacute;n se basa en el circuito del
+                            Azimuth Dynamic Overdrive disponible en el sitio web
+                            de
+                            <a
+                                href="https://aionfx.com/project/azimuth-dynamic-overdrive/"
+                                style="
+                                    text-decoration: underline;
+                                    color: var(--color-ok);
+                                "
+                                target="_blank"
+                            >
+                                AION Electronics </a
+                            >. Hemos modificado el circuito para mantener una
+                            &uacute;nica voz que consideramos muy "dumblesca". <b>100€</b>
+                        </p>
+                        <button class="primario" data-producto="orivore">
+                            <a href="#">Comprar</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img
+                            src="./static/img/productos/fuuter.jpg"
+                            alt="Pedal de fuzz inspirado en una modificaci&oacute;n al Boss DS-1"
+                        />
+                    </div>
+                    <div class="tarjeta-detalles">
+                        <h2 class="tarjeta-titulo">Fuuter</h2>
+                        <h3 class="tarjeta-subtitulo">Fuzz</h3>
+                        <p class="tarjeta-descripcion">
+                            Un fuzz inspirado en una modificaci&oacute;n al Boss
+                            DS-1 que emula un octafuzz.
+                        </p>
+                        <button class="secundario" data-producto="fuuter">
+                            <a href="#">Comprar</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img
+                            src="./static/img/productos/fuzzitte.jpg"
+                            alt="Pedal Fuzzitte que emula la distorsi&oacute;n de un grabador de cinta"
+                        />
+                    </div>
+                    <div class="tarjeta-detalles">
+                        <h2 class="tarjeta-titulo">Fuzzitte</h2>
+                        <h3 class="tarjeta-subtitulo">Fuzz</h3>
+                        <p class="tarjeta-descripcion">
+                            Fuzzitte es un pedal que emula la distorsi&oacute;n
+                            de un grabador de cinta de cuatro pistas.
+                        </p>
+                        <button class="secundario" data-producto="fuzzitte">
+                            <a href="#">Comprar</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img
+                            src="./static/img/productos/foutffud.jpg"
+                            alt="Pedal de chorus Foutffud basado en el Hermida Zendrive"
+                        />
+                    </div>
+                    <div class="tarjeta-detalles">
+                        <h2 class="tarjeta-titulo">Foutffud</h2>
+                        <h3 class="tarjeta-subtitulo">Chorus</h3>
+                        <p class="tarjeta-descripcion">
+                            Foutffud de pl&aacute;tano. Pedal tri-chorus basado
+                            en el Boss CE-1 y el Boss DC-2.
+                        </p>
+                        <button class="secundario" data-producto="foutffud">
+                            <a href="#">Comprar</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacto" id="seccion-contacto">
+            <div class="contenedor">
+                <h1>Contacto</h1>
+                <p>
+                    Encargue su pedal personalizado, solicite m&aacute;s
+                    informaci&oacute;n o cont&aacute;ctenos para oportunidades
+                    de negocio. Estamos a su disposici&oacute;n.
+                </p>
+                <form action="/" method="post">
+                    <div class="campo-formulario">
+                        <input
+                            type="text"
+                            name="nombre"
+                            id="nombre-contacto"
+                            placeholder="Nombre"
+                            required
+                        />
+                    </div>
+                    <div class="campo-formulario">
+                        <input
+                            type="email"
+                            name="email"
+                            id="email-contacto"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div class="campo-formulario">
+                        <textarea
+                            name="mensaje"
+                            id="mensaje-contacto"
+                            placeholder="Mensaje"
+                        ></textarea>
+                    </div>
+                    <div class="campo-formulario">
+                        <button type="submit" class="primario">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <h2><span>©</span>LITHOSFXs, 2023</h2>
+            <div class="redes-sociales">
+                <a href="https://instagram.com" target="_blank">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                        width="24"
+                        height="24"
+                        style="fill: var(--color-secundario-info)"
+                    >
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                        />
+                    </svg>
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512"
+                        width="24"
+                        height="18"
+                        style="fill: var(--color-secundario-info)"
+                    >
+                        <path
+                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                        />
+                    </svg>
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512"
+                        width="24"
+                        height="24"
+                        style="fill: var(--color-secundario-info)"
+                    >
+                        <path
+                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </footer>
+        <!-- Modal Acceder/Registro -->
+        <div id="modal-usuario" class="modal ocultar">
+            <div class="contenedor">
+                <button id="cerrar-modal-usuario" class="cerrar-modal">
+                    <img
+                        class="icono"
+                        src="./static/img/iconos/times.svg"
+                        alt="Ícono de cerrar"
+                    />
+                </button>
+                <h1>Accede a tu cuenta</h1>
+                <form
+                    class="formulario-usuario"
+                    action="/index.html"
+                    method="post"
+                >
+                    <div class="campo-formulario ocultar">
+                        <img
+                            class="icono"
+                            src="./static/img/iconos/user-alt.svg"
+                            alt="Ícono de acceso/registro"
+                        />
+                        <input
+                            type="text"
+                            name="nombre"
+                            id="nombre-usuario"
+                            placeholder="Nombre"
+                        />
+                    </div>
+                    <div class="campo-formulario">
+                        <img
+                            src="./static/img/iconos/envelope.svg"
+                            alt="Ícono de email"
+                            class="icono"
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            id="email-usuario"
+                            placeholder="Email"
+                        />
+                    </div>
+                    <div class="campo-formulario">
+                        <img
+                            src="./static/img/iconos/lock.svg"
+                            alt=""
+                            class="icono"
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            id="password-usuario"
+                            placeholder="Contraseña"
+                        />
+                    </div>
+                    <div class="campo-formulario">
+                        <button type="submit" class="primario">Acceder</button>
+                    </div>
+                </form>
+                <p>
+                    <span>¿No tienes cuenta?</span>
+                    <a href="#">Reg&iacute;strate</a>
+                </p>
+                <p>
+                    <span>¿Olvidaste tu</span>
+                    <a href="#">contrase&ntilde;a?</a>
+                </p>
+            </div>
+        </div>
+        <!-- Modal Carrito -->
+        <div id="modal-carrito" class="modal ocultar">
+            <div class="contenedor">
+                <button id="cerrar-modal-carrito" class="cerrar-modal">
+                    <img
+                        class="icono"
+                        src="./static/img/iconos/times.svg"
+                        alt="Ícono de cerrar"
+                    />
+                </button>
+                <h1>Su compra</h1>
+                <h2>Su carrito de compra est&aacute; vac&iacute;o</h2>
+                <ul class="carrito-lista">
+                    <li class="carrito-producto ocultar" id="orivore">
+                        <img
+                            src="./static/img/productos/orivore.jpg"
+                            alt="Pedal de overdrive Orivore, basado en el Hermida Zendrive"
+                        />
+                        <div>
+                            <h3>Orivore Overdrive</h3>
+                            <p>
+                                Pedal de overdrive Orivore, basado en el Hermida
+                                Zendrive.
+                            </p>
+                            <input
+                                type="number"
+                                name="cantidad"
+                                value="1"
+                                min="1"
+                                max="5"
+                            />
+                            <span> x 100€ </span>
+                        </div>
+                    </li>
+                    <li class="carrito-producto ocultar" id="fuzzitte">
+                        <img
+                            src="./static/img/productos/fuzzitte.jpg"
+                            alt="Pedal Fuzzitte que emula la distorsi&oacute;n de un grabador de cinta"
+                        />
+                        <div>
+                            <h3>Fuzzitte Fuzz</h3>
+                            <p>
+                                Pedal Fuzzitte que emula la distorsi&oacute;n de
+                                un grabador de cinta.
+                            </p>
+                            <input
+                                type="number"
+                                name="cantidad"
+                                value="1"
+                                min="1"
+                                max="5"
+                            />
+                            <span> x 100€ </span>
+                        </div>
+                    </li>
+                    <li class="carrito-producto ocultar" id="foutffud">
+                        <img
+                            src="./static/img/productos/foutffud.jpg"
+                            alt="Pedal de chorus Foutffud basado en el Hermida Zendrive"
+                        />
+                        <div>
+                            <h3>Foutffud Chorus</h3>
+                            <p>
+                                Foutffud de pl&aacute;tano. Pedal tri-chorus
+                                basado en el Boss CE-1 y el Boss DC-2.
+                            </p>
+                            <input
+                                type="number"
+                                name="cantidad"
+                                value="1"
+                                min="1"
+                                max="5"
+                            />
+                            <span> x 100€ </span>
+                        </div>
+                    </li>
+                    <li class="carrito-producto ocultar" id="fuuter">
+                        <img
+                            src="./static/img/productos/fuuter.jpg"
+                            alt="Pedal de fuzz Fuuter basado en BOSS DS-1 modificado"
+                        />
+                        <div>
+                            <h3>Fuuter Fuzz</h3>
+                            <p>
+                                Pedal de fuzz Fuuter basado en BOSS DS-1
+                                modificado
+                            </p>
+                            <input
+                                type="number"
+                                name="cantidad"
+                                value="1"
+                                min="1"
+                                max="5"
+                            />
+                            <span> x 100€ </span>
+                        </div>
+                    </li>
+                </ul>
+                <button class="primario ocultar">Proceder</button>
+            </div>
+        </div>
+        <!-- Modal Nosotros -->
+        <div class="modal ocultar" id="modal-sobre-nosotros">
+            <div class="contenedor">
+                <button id="cerrar-modal-sobre-nosotros" class="cerrar-modal">
+                    <img
+                        class="icono"
+                        src="./static/img/iconos/times.svg"
+                        alt="Ícono de cerrar"
+                    />
+                </button>
+                <h1>Somos m&uacute;sicos poetas y locos</h1>
+                <p>
+                    Conformamos un grupo multidisciplinario de profesionales que
+                    tenemos en com&uacute;n nuestra pasi&oacute;n por la
+                    m&uacute;sica y la electr&oacute;nica.
+                </p>
+                <address>
+                    <p>
+                        <span>Correo electr&oacute;nico:</span>
+                        <a
+                            href="mailto:uncorreo@gmail.com"
+                            >uncorreo@gmail.com</a
+                        >
+                    </p>
+                    <p>
+                        <span>Tel&eacute;fono:</span>
+                        <a href="tel:+34666666666">+34 666 666 666</a>
+                    </p>
+                    <p>
+                        <span>Direcci&oacute;n:</span>
+                        <a
+                            href="https://goo.gl/maps/9Zz4Z9Zz4Zz4Zz4Z9"
+                            target="_blank"
+                        >
+                            Calle Falsa, 123 3I, Sevilla
+                        </a>
+                    </p>
+                </address>
+            </div>
+        </div>
+    </body>
+</html>

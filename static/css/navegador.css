@@ -1,0 +1,348 @@
+/* ***************************************************************************
+* Clases de Íconos y Marca
+* ****************************************************************************/
+.icono {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+.icono.logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    width: 5rem;
+    max-width: 5rem;
+    max-height: 5rem;
+    padding: 1rem;
+    background-color: var(--color-secundario-info, #0C4264);
+    border: 0.3rem solid var(--color-secundario-info, #0C4264);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.icono.logo>span {
+    display: block;
+    height: 100%;
+    width: .4rem;
+    background-color: var(--color-blanco, #ffffff);
+    border-radius: 4px;
+}
+
+.icono.logo>span>b {
+    display: block;
+    background-color: var(--color-secundario-info, #0C4264);
+    height: .4rem;
+    width: .4rem;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+.icono.logo>span:nth-child(1)>b {
+    margin-top: 0.4rem;
+}
+
+.icono.logo>span:nth-child(2)>b {
+    margin-top: 1.6rem;
+}
+
+.icono.logo>span:nth-child(3)>b {
+    margin-top: 0.4rem;
+}
+
+.icono.logo:hover>span:nth-child(1)>b {
+    margin-top: 1.6rem;
+}
+
+.icono.logo:hover>span:nth-child(2)>b {
+    margin-top: 0.4rem;
+}
+
+.icono.logo:hover>span:nth-child(3)>b {
+    margin-top: 1.6rem;
+}
+
+.logo-marca {
+    display: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0 0 0 1rem;
+    width: auto;
+    text-shadow: none;
+    font-size: 2.4rem;
+}
+
+.icono.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icono.hamburguesa>span {
+    display: inline;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--color-oscuro);
+    border-radius: 4px;
+}
+
+/* Animaciones menú hamburguesa para móvil */
+@keyframes anima-hamburguesa-span-1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(.65rem);
+    }
+
+    100% {
+        transform: translateY(.65rem) rotate(45deg);
+    }
+}
+
+@keyframes anima-hamburguesa-span-2 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes anima-hamburguesa-span-3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-.65rem);
+    }
+
+    100% {
+        transform: translateY(-.65rem) rotate(135deg);
+    }
+}
+
+@keyframes anima-hamburguesa-span-1-reverso {
+    0% {
+        transform: translateY(.65rem) rotate(45deg);
+    }
+
+    50% {
+        transform: translateY(.65rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes anima-hamburguesa-span-2-reverso {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes anima-hamburguesa-span-3-reverso {
+    0% {
+        transform: translateY(-.65rem) rotate(135deg);
+    }
+
+    50% {
+        transform: translateY(-.65rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animar menú hamburguesa (reverso cuando no está activo) */
+.icono.hamburguesa.animar>span:nth-child(1) {
+    animation: anima-hamburguesa-span-1-reverso 0.3s ease-in-out forwards;
+}
+
+.icono.hamburguesa.animar>span:nth-child(2) {
+    animation: anima-hamburguesa-span-2-reverso 0.3s ease-in-out forwards;
+}
+
+.icono.hamburguesa.animar>span:nth-child(3) {
+    animation: anima-hamburguesa-span-3-reverso 0.3s ease-in-out forwards;
+}
+
+/* Animar botón hamburguesa (hacia adelante) */
+.icono.hamburguesa.animar.activo>span:nth-child(1) {
+    animation: anima-hamburguesa-span-1 0.3s ease-in-out forwards;
+}
+
+.icono.hamburguesa.animar.activo>span:nth-child(2) {
+    animation: anima-hamburguesa-span-2 0.3s ease-in-out forwards;
+}
+
+.icono.hamburguesa.animar.activo>span:nth-child(3) {
+    animation: anima-hamburguesa-span-3 0.3s ease-in-out forwards;
+}
+
+/* ***************************************************************************
+* Navegador
+* ****************************************************************************/
+.navegador-principal {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6.4rem;
+    /* navegador con altura fija */
+    background-color: var(--color-blanco, #ffffff);
+    z-index: 2;
+}
+
+.barra-navegador {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.botones-mvl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-mvl {
+    padding: 1rem;
+    height: 4rem;
+    width: 4rem;
+    vertical-align: middle;
+}
+
+/* Menú principal*/
+#menu-navegador-principal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 0;
+}
+
+#menu-navegador-principal>ul.enlaces {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blanco, #ffffff);
+    top: calc(50vh - 100vmax);
+    left: calc(50vw - 100vmax);
+    width: 200vmax;
+    height: 200vmax;
+    transform: scale(0);
+    border-radius: 100%;
+}
+
+#menu-navegador-principal.animar>ul.enlaces {
+    transition: transform 0.38s ease-in-out;
+}
+
+#menu-navegador-principal>ul.enlaces>li {
+    color: var(--color-oscuro);
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+#menu-navegador-principal>ul.enlaces>li:hover {
+    transform: scale(1.1);
+}
+
+#menu-navegador-principal.activo>ul.enlaces {
+    transform: scale(1);
+}
+
+/* Cambiar navegador para dispositivos medianos y grandes */
+@media screen and (min-width: 768px) {
+    .navegador-principal {
+        height: 8rem;
+    }
+
+    .navegador-principal>.contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .barra-navegador {
+        width: 100%;
+    }
+
+    /* Ocultar botón hamburguesa para móviles */
+    .barra-navegador>.botones-mvl>.btn-mvl:last-child {
+        display: none;
+    }
+
+    /* mostrar brand */
+    a#logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+    }
+
+    .logo-marca {
+        display: block;
+    }
+
+    #menu-navegador-principal {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        height: calc(6.4rem - 2rem);
+    }
+
+    #menu-navegador-principal>ul.enlaces {
+        position: relative;
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        height: 100%;
+        width: auto;
+        transform: scale(1);
+    }
+
+    #menu-navegador-principal>ul.enlaces>li {
+        margin: 0 1rem;
+        font-size: 2.2rem;
+    }
+}

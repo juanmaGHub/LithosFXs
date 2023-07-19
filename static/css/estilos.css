@@ -1,0 +1,606 @@
+/* ***************************************************************************
+* Variables y fuentes
+* ****************************************************************************/
+:root {
+    --color-primario: #FFE86D;
+    --color-secundario-info: #0C4264;
+    --color-ok: #26648B;
+    --color-error: #C3512D;
+    --color-advertencia: #E39054;
+    --color-oscuro: #343a40;
+    --color-negro: #000000;
+    --color-blanco: #ffffff;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url(../fonts/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
+}
+
+/* ***************************************************************************
+* Estilos generales
+* ****************************************************************************/
+/* Etiquetas */
+body {
+    /* Montserrat será la fuente por defecto */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+section {
+    position: relative;
+    top: 100vh;
+    /* posicionar después de la sección del hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+section h1 {
+    margin: 3.4rem 0 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: var(--color-secundario-info);
+    text-shadow: -2px 3px var(--color-primario);
+    margin: 1rem auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-ok);
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--color-ok);
+    font-weight: 500;
+}
+
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    width: 9.3rem;
+    height: 3.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button>a {
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+}
+
+textarea {
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+footer {
+    position: relative;
+    top: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+footer h2 {
+    color: var(--color-secundario-info);
+    font-size: 1.6rem;
+}
+
+/* botones de la página */
+button.primario {
+    background-color: var(--color-primario);
+    color: var(--color-negro, #000000);
+}
+
+button.secundario {
+    background-color: var(--color-blanco, #ffffff);
+    border: 2px solid var(--color-secundario-info);
+    color: var(--color-secundario-info);
+}
+
+/* clases para formularios */
+.campo-formulario {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.campo-formulario>input:not(input[type='submit']) {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--color-oscuro, #343a40);
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+
+/* típica clase container */
+.contenedor {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Para cards con los productos */
+.tarjeta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 30rem;
+    min-width: 22rem;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0px 26px 43px 0px rgba(0, 0, 0, 0.25);
+    margin: 1.8rem auto;
+}
+
+.tarjeta.destacado {
+    margin-top: 0;
+    background-color: var(--color-primario);
+}
+
+.tarjeta button.primario {
+    border: 2px solid var(--color-secundario-info);
+    color: var(--color-secundario-info);
+    margin: .2rem auto 1.2rem auto;
+}
+
+.tarjeta>.tarjeta-imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 40rem;
+    height: 34vh;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.tarjeta>.tarjeta-imagen>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.tarjeta>.tarjeta-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta>.tarjeta-detalles>.tarjeta-descripcion {
+    display: none;
+    text-align: center;
+}
+
+.tarjeta>.tarjeta-detalles>h2 {
+    margin: 1rem auto 0 auto;
+}
+
+.tarjeta>.tarjeta-detalles>h3 {
+    margin: 0 auto 1.2rem;
+}
+
+.tarjeta>.tarjeta-contenido img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.tarjeta-detalles>button.secundario {
+    margin: .2rem auto 1.2rem auto;
+}
+
+/* Otras clases reutilizables en varios lugares del código HTML */
+.ocultar {
+    display: none !important;
+}
+
+/* *************************************************************************
+* Sección Hero
+* ************************************************************************ */
+.hero {
+    position: absolute;
+    height: calc(100vh - 6.4rem);
+    width: 100%;
+    background-color: var(--color-secundario-info, #0C4264);
+    top: 6.4rem;
+}
+
+.hero>.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 6.4rem);
+    overflow: hidden;
+}
+
+.hero .hero-contenido {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero h1.hero-copy {
+    font-size: 3.2rem;
+    color: var(--color-blanco, #ffffff);
+    text-shadow: none;
+}
+
+.hero p.hero-detalles {
+    color: var(--color-blanco, #ffffff);
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.hero .hero-contenido>button {
+    margin: 1rem auto;
+}
+
+/* Carrusel */
+.hero-carrusel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: inherit;
+    max-height: 38rem;
+    max-width: 24rem;
+    margin: 1rem auto;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 80%;
+    background-color: var(--color-secundario-info, #0C4264);
+    border-radius: 16px;
+    box-shadow: 0px 26px 43px 7px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    min-width: 20.4rem;
+    cursor: pointer;
+}
+
+.carrusel>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transform: scale(1);
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.carrusel>img.activo {
+    z-index: 1;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+.carrusel>img:nth-child(1) {
+    transform: translateX(50%);
+}
+
+.carrusel>img:nth-child(3) {
+    transform: translateX(-50%);
+}
+
+.carrusel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 14%;
+}
+
+.carrusel-dots>.dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: var(--color-secundario-info, #0C4264);
+    border: 2px solid var(--color-blanco, #ffffff);
+    margin: 0 0.4rem;
+    cursor: pointer;
+}
+
+.carrusel-dots>.dot.activo {
+    background-color: var(--color-blanco, #ffffff);
+}
+
+@media screen and (min-width: 768px) {
+    .hero>.contenedor {
+        flex-direction: row;
+        height: calc(100vh - 8rem);
+    }
+
+    .hero .hero-contenido {
+        width: 40%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0 2rem;
+    }
+
+    .hero .hero-contenido p.hero-detalles {
+        margin: 2rem 0;
+        font-size: 1.6rem;
+        text-align: left;
+        width: 90%;
+    }
+
+    .hero .hero-contenido h1.hero-copy {
+        margin: 2rem 0;
+        font-size: 4rem;
+        text-align: left;
+    }
+
+    .hero .hero-carrusel {
+        width: 28vw;
+    }
+
+    .hero .hero-contenido>button {
+        margin: 1rem 0;
+        text-align: left;
+    }
+
+    .carrusel {
+        overflow: unset;
+    }
+
+    .carrusel>img {
+        width: 90%;
+        opacity: 0.5;
+    }
+
+    .carrusel>img.activo {
+        transform: scale(1.2);
+    }
+
+    .carrusel-dots {
+        margin-top: 4rem;
+    }
+}
+
+/* *************************************************************************
+* Sección Productos
+* ************************************************************************ */
+.productos {
+    position: relative;
+    top: 100vh;
+    align-items: center;
+    width: 100%;
+}
+
+.productos h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.productos>.contenedor {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .productos>.contenedor {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tarjeta {
+        margin: 1.8rem 1.8rem;
+    }
+
+    .tarjeta.destacado {
+        flex-direction: row;
+        height: 50rem;
+        width: calc(100% - 3.6rem);
+        margin: 0 4.8rem 2rem 4.8rem;
+        max-width: 97.2rem;
+        min-width: 63.6rem;
+    }
+
+    .tarjeta.destacado>.tarjeta-imagen {
+        width: 50%;
+        height: 100%;
+        max-height: 100rem;
+        border-radius: 16px 0 0 16px;
+    }
+
+    .tarjeta.destacado>.tarjeta-detalles {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        border-radius: 0 16px 16px 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 1rem;
+    }
+
+
+    .tarjeta.destacado>.tarjeta-detalles>* {
+        margin: 1rem 1.2rem;
+        text-align: left;
+    }
+
+    .tarjeta>.tarjeta-detalles>.tarjeta-descripcion {
+        display: block;
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .tarjeta h2,
+    .tarjeta h3 {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .tarjeta.destacado button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .tarjeta.tarjeta.destacado>.tarjeta-detalles>.tarjeta-descripcion {
+        text-align: left;
+    }
+}
+
+/* *************************************************************************
+* Sección de Contacto
+* ************************************************************************ */
+.contacto {
+    background-color: var(--color-secundario-info, #0C4264);
+}
+
+.contacto>.contenedor {
+    max-width: 800px;
+}
+
+.contacto h1 {
+    color: var(--color-blanco, #ffffff);
+}
+
+.contacto p {
+    color: var(--color-blanco, #ffffff);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.contacto form {
+    margin-bottom: 4rem;
+}
+
+.contacto form>.campo-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contacto form>.campo-formulario>input:not(input[type='submit']),
+.contacto form>.campo-formulario>textarea {
+    width: 90%;
+    height: 3rem;
+    margin: .2rem 0 1rem;
+    font-size: 1.2rem;
+
+}
+
+.contacto form>.campo-formulario:last-child {
+    margin-top: 2rem;
+}
+
+.contacto form>.campo-formulario>textarea {
+    height: 10rem;
+}
+
+section.contacto {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .contacto>.contenedor {
+        padding: 12rem;
+    }
+
+    .contacto p {
+        font-size: 1.6rem;
+    }
+
+    .contacto form>.campo-formulario>input:not(input[type='submit']),
+    .contacto form>.campo-formulario>textarea {
+        font-size: 1.6rem;
+    }
+}
+
+/* *************************************************************************
+* Sección Footer
+* ************************************************************************ */
+footer>.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6.4rem;
+}
+
+footer>.redes-sociales * {
+    margin: 0;
+}
+
+footer>.redes-sociales>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.2rem;
+    height: 100%;
+}
