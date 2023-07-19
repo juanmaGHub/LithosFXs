@@ -37,7 +37,7 @@ class FalsoCarrito {
         };
 
         this.quitarProducto = (producto) => {
-            if (producto.hasOwnProperty(producto) && productos[producto] > 0) {
+            if (productos.hasOwnProperty(producto) && productos[producto] > -1) {
                 productos[producto]--;
                 total -= 100;
             }
@@ -70,6 +70,24 @@ class CarritoModal {
         );
         let h2SinProductos = elementoCarrito.querySelector("h2");
         let btnProceder = elementoCarrito.querySelector("button.primario");
+        let entradas = elementoCarrito.querySelectorAll("input");
+
+        // se añade un evento a cada input del carrito de la compra para que se actualice el carrito de la compra
+        entradas.forEach((entrada) => {
+            entrada.addEventListener("change", () => {
+                let producto = entrada.parentElement.parentElement.id;
+                let cantidad = entrada.value;
+                let cantidadActual = falsoCarrito.getCantidad(producto);
+                if (cantidad > cantidadActual) {
+                    falsoCarrito.agregarProducto(producto);
+                    new Nota("Producto añadido al carrito", "ok", 200);
+                } else if (cantidad < cantidadActual) {
+                    falsoCarrito.quitarProducto(producto);
+                    new Nota("Producto eliminado del carrito", "ok", 200);
+                }
+                this.actualizarModal();
+            });
+        });
 
         // actualizar el modal del carrito de la compra con los productos que hay en el carrito
         this.actualizarModal = () => {
