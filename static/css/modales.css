@@ -62,8 +62,8 @@
     height: 3rem;
 }
 
-#modal-usuario form>.campo-formulario>* {
-    margin: .8rem .4rem;
+#modal-usuario form>.campo-formulario img {
+    margin: 0 .8rem;
 }
 
 #modal-usuario form>.campo-formulario>button[type='submit'] {
