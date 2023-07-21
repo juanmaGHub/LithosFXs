@@ -7,6 +7,17 @@
     width: 100%;
     max-height: 2rem;
     max-width: 2rem;
+
+  
+}
+.icono, button, img, a#logo {
+      /* Evitar arrastrar, seleccionar y cambiar color tanto en clicks como taps (móvil) */
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
 }
 
 .icono.logo {
