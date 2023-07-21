@@ -97,6 +97,13 @@
     flex-shrink: 0;
 }
 
+#modal-carrito > h2 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+}
+
 #modal-carrito > .contenedor > .carrito-lista {
     margin-bottom: 2rem;
 }

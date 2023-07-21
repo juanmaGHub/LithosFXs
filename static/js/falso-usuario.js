@@ -15,9 +15,15 @@ class FalsaDB {
          * @property {function} consulta Consulta un usuario en la "base de datos"
          * @property {function} registro Registra un usuario en la "base de datos"
          */
+        if (!window.localStorage.hasOwnProperty("usuarios-lithosfxs")) {
+            window.localStorage.setItem("usuarios-lithosfxs", JSON.stringify({}));
+        }
 
-        window.localStorage.setItem("usuarios-lithosfxs", JSON.stringify({}));
-
+        // esta función es para borrar la falsa base de datos
+        this.clearLocalStorage = () => {
+            window.localStorage.removeItem("usuarios-lithosfxs");
+        };
+        
         this.consulta = (email, clave) => {
             let db = JSON.parse(
                 window.localStorage.getItem("usuarios-lithosfxs")

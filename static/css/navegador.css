@@ -263,7 +263,7 @@
     justify-content: center;
     background-color: var(--color-blanco, #ffffff);
     top: calc(50vh - 100vmax);
-    left: calc(50vw - 100vmax);
+    left: calc(50vw - 100vmax - 2rem);
     width: 200vmax;
     height: 200vmax;
     transform: scale(0);
