@@ -83,6 +83,8 @@ button {
 }
 
 button>a {
+    display: flex;
+    align-items: center;
     padding: 1rem 2rem;
     width: 100%;
     height: 100%;
@@ -142,6 +144,7 @@ button.secundario {
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: .8rem .4rem;
 }
 
 .campo-formulario>input:not(input[type='submit']) {
@@ -182,10 +185,13 @@ button.secundario {
     background-color: var(--color-primario);
 }
 
+.tarjeta button {
+    margin: .2rem auto 1.2rem auto;
+}
+
 .tarjeta button.primario {
     border: 2px solid var(--color-secundario-info);
     color: var(--color-secundario-info);
-    margin: .2rem auto 1.2rem auto;
 }
 
 .tarjeta>.tarjeta-imagen {
@@ -195,7 +201,7 @@ button.secundario {
     align-items: center;
     width: 100%;
     max-height: 40rem;
-    height: 34vh;
+    height: 40vh;
     padding: 1rem;
     margin-bottom: 1rem;
     overflow: hidden;
@@ -217,8 +223,15 @@ button.secundario {
 }
 
 .tarjeta>.tarjeta-detalles>.tarjeta-descripcion {
-    display: none;
     text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.tarjeta.destacado>.tarjeta-detalles>.tarjeta-descripcion {
+    display: block;
+    max-height: 14rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .tarjeta>.tarjeta-detalles>h2 {
@@ -227,17 +240,6 @@ button.secundario {
 
 .tarjeta>.tarjeta-detalles>h3 {
     margin: 0 auto 1.2rem;
-}
-
-.tarjeta>.tarjeta-contenido img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.tarjeta-detalles>button.secundario {
-    margin: .2rem auto 1.2rem auto;
 }
 
 /* Otras clases reutilizables en varios lugares del código HTML */
@@ -490,8 +492,8 @@ button.secundario {
         text-align: left;
     }
 
-    .tarjeta>.tarjeta-detalles>.tarjeta-descripcion {
-        display: block;
+    .tarjeta.destacado>.tarjeta-detalles>.tarjeta-descripcion {
+        max-height: none;
         width: 90%;
         margin-bottom: 1rem;
     }
@@ -550,9 +552,7 @@ button.secundario {
 .contacto form>.campo-formulario>textarea {
     width: 90%;
     height: 3rem;
-    margin: .2rem 0 1rem;
     font-size: 1.2rem;
-
 }
 
 .contacto form>.campo-formulario:last-child {
