@@ -5,6 +5,7 @@ const menuNavegadorId = 'menu-navegador-principal';
 const seccionContactoId = 'seccion-contacto';
 const seccionSobreNosotrosId = 'seccion-sobre-nosotros';
 const cerrarModalSobreNosotrosId = 'cerrar-modal-sobre-nosotros';
+const linkSobreNosotrosId = 'link-sobre-nosotros';
 const logoId = 'logo';
 const claseActivo = 'activo';
 const claseAnimar = 'animar';
@@ -22,7 +23,8 @@ let alternaMenuMvl = (icono, menu, claseActivo, claseAnimar) => {
 
 let navegaLinks = (links, icono, menu, claseActivo) => {
     links.forEach((link) => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            if (link.id === linkSobreNosotrosId) e.preventDefault();
             icono.classList.remove(claseActivo);
             menu.classList.remove(claseActivo);
         });
